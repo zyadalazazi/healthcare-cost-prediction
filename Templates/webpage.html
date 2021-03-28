@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Predicting Healthcare Charges</title>
+</head>
+<body>
+<center>
+<h3><b><center>Predicting Healthcare Charges</center></b></h3>	
+<h3><b><center>Put your information below</center><b></h3>
+
+<p><font color = "black">Please input information related to age, bmi, number of children and smoking status.</font></p>
+
+<div class = "Prediction">
+	<center>
+	<form action = "{{ url_for('predict')}}", method="POST">
+		<b> Age: <input type = "text" name = "age" placeholder = "Enter Age" required = "required" /><br><br>
+		BMI: <input type = "text" name = "bmi" placeholder = "Enter BMI" required = "required" /><br><br>
+		Children Number: <input type = "text" name = "children" placeholder = "Enter Number of Children" required = "required" /><br><br>
+		Do you smoke? <input type = "text" name = "smoker" placeholder = "Smoker (0 for no, 1 for yes)" required = "required" /><br><br>
+
+		<button type = "submit", class = "btn btn-primary btn-block btn-large">Predict</button>
+	</form>
+   </center>
+        <h3><font color = 'white'>{{prediction_text}}</font></h3>
+</div>	
+</center>
+<body style="background-color:#065535;">
+
+</body>
+</html>
