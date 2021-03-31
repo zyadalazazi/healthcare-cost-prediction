@@ -24,3 +24,6 @@ def predict():
 
 	return render_template('webpage.html', prediction_text = 'Predicted Charge: {} USD'.format(output))
 
+
+if __name__ == '__main__':
+    app.run(debug = True, port = 9566)
